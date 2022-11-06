@@ -9,63 +9,57 @@
                 <div class="table-responsive">
                     <table id="zero_config" class="table table-striped table-bordered">
                         <thead>
-                            <tr>
-                                <th>Categories name</th>
-                                <th>Trainer name</th>
-                                <th>Time</th>
+                            <tr style="text-align: center">
                                 <th>Day</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Gym</td>
-                                <td>john</td>
-                                <td>7:00am-9:00am</td>
-                                <td>Monday</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
+                                <td style="text-align: center">Monday</td>
+                                <td style="text-align: center">
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Monday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Gym</td>
-                                <td>john</td>
-                                <td>7:00am-9:00am</td>
-                                <td>Monday</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>Gym</td>
-                                <td>john</td>
-                                <td>7:00am-9:00am</td>
-                                <td>Monday</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
+                                <td style="text-align: center">Tuesday</td>
+                                <td style="text-align: center">
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Tuesday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Gym</td>
-                                <td>john</td>
-                                <td>7:00am-9:00am</td>
-                                <td>Monday</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
+                                <td style="text-align: center">Wednesday</td>
+                                <td style="text-align: center">
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Wednesday'">Chi tiết</button>
                                 </td>
                             </tr>
-
+                            <tr>
+                                <td style="text-align: center">Thursday</td>
+                                <td style="text-align: center">
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Thursday'">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Friday</td>
+                                <td style="text-align: center">
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Friday'">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Saturday</td>
+                                <td style="text-align: center">
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Saturday'">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">Sunday</td>
+                                <td style="text-align: center">
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Sunday'">Chi tiết</button>
+                                </td>
+                            </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Categories name</th>
-                                <th>Trainer name</th>
-                                <th>Time</th>
                                 <th>Day</th>
                                 <th>Action</th>
                             </tr>
@@ -81,13 +75,13 @@
 
 
 <!-- slimscrollbar scrollbar JavaScript -->
-<script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-<script src="assets/extra-libs/sparkline/sparkline.js"></script>
+<script src="./view/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="./view/assets/extra-libs/sparkline/sparkline.js"></script>
 <!-- this page js -->
-<script src="assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
-<script src="assets/extra-libs/multicheck/jquery.multicheck.js"></script>
-<script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+<script src="./view/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="./view/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+<script src="./view/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+<script src="./view/assets/extra-libs/DataTables/datatables.min.js"></script>
 <script>
     /****************************************
      *       Basic Table                   *

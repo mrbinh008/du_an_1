@@ -16,40 +16,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php foreach ($categorie as $item =>$value): ?>
                             <tr>
-                                <td>Gym</td>
-                                <td>sssssdfsdg</td>
+                                <td><?=$value->categories_name?></td>
+                                <td><?=$value->categories_meaningful?></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='categorie_edit.php?id=<?=$value->id?>'">Sửa</button>
+                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete('<?=$value->id?>','<?=$value->categories_name?>') ">Xóa</button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Gym</td>
-                                <td>sssssdfsdg</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>Gym</td>
-                                <td>sssssdfsdg</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Gym</td>
-                                <td>sssssdfsdg</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
-                                </td>
-                            </tr>
-
+                        <?php endforeach;?>
                         </tbody>
                         <tfoot>
                         <tr>                               
@@ -68,18 +44,23 @@
 
 
 <!-- slimscrollbar scrollbar JavaScript -->
-<script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-<script src="assets/extra-libs/sparkline/sparkline.js"></script>
+<script src="./view/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="./view/assets/extra-libs/sparkline/sparkline.js"></script>
 <!-- this page js -->
-<script src="assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
-<script src="assets/extra-libs/multicheck/jquery.multicheck.js"></script>
-<script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+<script src="./view/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="./view/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+<script src="./view/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+<script src="./view/assets/extra-libs/DataTables/datatables.min.js"></script>
 <script>
     /****************************************
      *       Basic Table                   *
      ****************************************/
     $('#zero_config').DataTable();
+    function confirm_delete(id,name){
+        if(confirm('Bạn chắc chắn muốn xóa '+name)){
+            window.open('categorie_delete.php?id='+id,'_self');
+        }
+    }
 </script>
 
 <?php include_once 'layout/footer.php'; ?>

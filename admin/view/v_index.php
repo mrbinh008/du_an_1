@@ -706,12 +706,12 @@
 
 
         <!-- Charts js Files -->
-        <script src="assets/libs/flot/excanvas.js"></script>
-    <script src="assets/libs/flot/jquery.flot.js"></script>
-    <script src="assets/libs/flot/jquery.flot.pie.js"></script>
-    <script src="assets/libs/flot/jquery.flot.time.js"></script>
-    <script src="assets/libs/flot/jquery.flot.stack.js"></script>
-    <script src="assets/libs/flot/jquery.flot.crosshair.js"></script>
-    <script src="assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="dist/js/pages/chart/chart-page-init.js"></script>
+        <script src="./view/assets/libs/flot/excanvas.js"></script>
+    <script src="./view/assets/libs/flot/jquery.flot.js"></script>
+    <script src="./view/assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="./view/assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="./view/assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="./view/assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="./view/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="./view/dist/js/pages/chart/chart-page-init.js"></script>
     <?php include_once 'layout/footer.php';?>

@@ -98,13 +98,13 @@
 
 
 <!-- slimscrollbar scrollbar JavaScript -->
-<script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-<script src="assets/extra-libs/sparkline/sparkline.js"></script>
+<script src="./view/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="./view/assets/extra-libs/sparkline/sparkline.js"></script>
 <!-- this page js -->
-<script src="assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
-<script src="assets/extra-libs/multicheck/jquery.multicheck.js"></script>
-<script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+<script src="./view/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="./view/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+<script src="./view/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+<script src="./view/assets/extra-libs/DataTables/datatables.min.js"></script>
 <script>
     /****************************************
      *       Basic Table                   *

@@ -1,4 +1,4 @@
-<?php include_once 'layout/header.php'; ?>
+<?php include_once 'admin/view/layout/header.php'; ?>
 <div class="page-wrapper">
     <div class="container-fluid">
         <div class="row">
@@ -62,18 +62,18 @@
 </div>
 
 
-<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="./view/assets/libs/jquery/dist/jquery.min.js"></script>
 <!-- This Page JS -->
-<script src="assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-<script src="dist/js/pages/mask/mask.init.js"></script>
-<script src="assets/libs/select2/dist/js/select2.full.min.js"></script>
-<script src="assets/libs/select2/dist/js/select2.min.js"></script>
-<script src="assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
-<script src="assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
-<script src="assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
-<script src="assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
-<script src="assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="assets/libs/quill/dist/quill.min.js"></script>
+<script src="./view/assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+<script src="./view/dist/js/pages/mask/mask.init.js"></script>
+<script src="./view/assets/libs/select2/dist/js/select2.full.min.js"></script>
+<script src="./view/assets/libs/select2/dist/js/select2.min.js"></script>
+<script src="./view/assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+<script src="./view/assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+<script src="./view/assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+<script src="./view/assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+<script src="./view/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="./view/assets/libs/quill/dist/quill.min.js"></script>
 <script>
     //***********************************//
     // For select 2
@@ -117,4 +117,4 @@
     });
 </script>
 
-<?php include_once 'layout/footer.php'; ?>
+<?php include_once 'admin/view/layout/footer.php'; ?>
