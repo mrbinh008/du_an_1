@@ -4,9 +4,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card">
-                        <form class="form-horizontal" action="" method="post">
+                        <form class="form-horizontal" action="?ctr=class_update" method="post">
                             <div class="card-body">
                                 <h4 class="card-title">Class Info</h4>
+                                <input type="text" class="form-control" id="id" name="id" value="<?=$class->id?>" hidden>
                                 <div class="form-group row">
                                     <label class="col-sm-3 text-right control-label col-form-label">Categories</label>
                                     <div class="col-md-9">
@@ -77,7 +78,7 @@
                                     <button type="submit" class="btn btn-primary" name="btn_update_class">Update
                                     </button>
                                     <button type="button" class="btn btn-primary"
-                                            onclick="location.href='class_detail_list.php?day=<?=$class->day_?>'">Danh sách
+                                            onclick="location.href='?ctr=class_detail_list&day=<?=$class->day_?>'">Danh sách
                                     </button>
                                 </div>
                             </div>

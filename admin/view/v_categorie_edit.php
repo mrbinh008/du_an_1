@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card">
-                        <form class="form-horizontal" action="categorie_update.php" method="post">
+                        <form class="form-horizontal" action="?ctr=categorie_update" method="post">
                             <div class="card-body">
                                 <h4 class="card-title">Categorie Info</h4>
                                 <input type="text" class="form-control" id="id" name="id" value="<?=$categorie->id?>" hidden>
@@ -25,7 +25,7 @@
                             <div class="border-top">
                                 <div class="card-body">
                                     <button type="submit" class="btn btn-primary" name="btn_update_categorie">Update</button>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='categorie_list.php'">Danh sách</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='?ctr=categorie_list'">Danh sách</button>
                                 </div>
                             </div>
                         </form>

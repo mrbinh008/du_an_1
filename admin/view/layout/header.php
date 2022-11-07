@@ -242,50 +242,50 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="p-t-30">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="?ctr=home" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
                         
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Thành viên</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="admin_member_add.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm thành viên </span></a></li>
-                                <li class="sidebar-item"><a href="admin_member_list.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách thành viên </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=admin_member_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm thành viên </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=admin_member_list" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách thành viên </span></a></li>
                             </ul>
                         </li>
                         
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Categories</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="categories_add.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm categories </span></a></li>
-                                <li class="sidebar-item"><a href="categorie_list.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách categories </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=categories_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm categories </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=categorie_list" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách categories </span></a></li>
                             </ul>
                         </li>
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Class</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="class_add.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm lớp </span></a></li>
-                                <li class="sidebar-item"><a href="class_list.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách lớp </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=class_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm lớp </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=class_list" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách lớp </span></a></li>
                             </ul>
                         </li>
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Trainers</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="trainers_add.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm trainers </span></a></li>
-                                <li class="sidebar-item"><a href="trainers_list.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách trainers </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=trainers_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm trainers </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=trainers_list" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách trainers </span></a></li>
                             </ul>
                         </li>
 
                         
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="user_list.php" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">User</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="?ctr=user_list" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">User</span></a></li>
 
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Blog</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="blog_add.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm bài viết </span></a></li>
-                                <li class="sidebar-item"><a href="blog_list.php" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách bài viết </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=blog_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm bài viết </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=blog_list" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách bài viết </span></a></li>
                             </ul>
                         </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="comments_list.php" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">Comments</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="?ctr=comments_list" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">Comments</span></a></li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="contact_list.php" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">Contact</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="?ctr=contact_list" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">Contact</span></a></li>
 
                     </ul>
                 </nav>

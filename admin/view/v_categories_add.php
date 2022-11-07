@@ -24,7 +24,7 @@
                         <div class="border-top">
                             <div class="card-body">
                                 <button type="submit" class="btn btn-primary" name="btn_add_categorie">Thêm</button>
-                                <button type="button" class="btn btn-primary" onclick="location.href='categorie_list.php'">Danh sách</button>
+                                <button type="button" class="btn btn-primary" onclick="location.href='?ctr=categorie_list'">Danh sách</button>
                             </div>
                         </div>
                     </form>

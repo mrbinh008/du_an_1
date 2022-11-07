@@ -5,7 +5,7 @@
                 <div class="col-md-6">
                     <div class="card">
 
-                        <form class="form-horizontal" action="admin_member_update.php" method="post">
+                        <form class="form-horizontal" action="?ctr=admin_member_update" method="post">
                             <div class="card-body">
                                 <h4 class="card-title">Personal Info</h4>
                                 <input type="text" class="form-control" id="id_member" name="id"
@@ -61,7 +61,7 @@
                             <div class="border-top">
                                 <div class="card-body">
                                     <button type="submit" class="btn btn-primary" name="btn_update_member">Update</button>
-                                     <button type="button" class="btn btn-primary" onclick="location.href='admin_member_list.php'">Danh sách</button>
+                                     <button type="button" class="btn btn-primary" onclick="location.href='?ctr=admin_member_list'">Danh sách</button>
                                 </div>
                             </div>
 

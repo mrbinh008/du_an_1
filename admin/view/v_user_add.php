@@ -8,21 +8,15 @@
                         <div class="card-body">
                             <h4 class="card-title">Personal Info</h4>
                             <div class="form-group row">
-                                <label for="fname" class="col-sm-3 text-right control-label col-form-label">Username</label>
+                                <label for="fist_name" class="col-sm-3 text-right control-label col-form-label">Fist name</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="uname" name="username" placeholder=" Username Here">
+                                    <input type="text" class="form-control" id="fist_name" name="fist_name" placeholder="Fist name Here">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="lname" class="col-sm-3 text-right control-label col-form-label">Password</label>
+                                <label for="last_name" class="col-sm-3 text-right control-label col-form-label">Last name</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="pass" name="password" placeholder="Password Here">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="lname" class="col-sm-3 text-right control-label col-form-label">Full Name</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="fname" name="fullname" placeholder="Full Name Here">
+                                    <input type="password" class="form-control" id="last_name" name="last_name" placeholder="Password Here">
                                 </div>
                             </div>
 
@@ -33,26 +27,35 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 text-right control-label col-form-label">Vai trò</label>
-                                <div class="col-md-9">
-                                    <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="role">
-                                        <option>Select</option>
-                                        <option value="0">Admin</option>
-                                        <option value="1">CTV</option>
-                                    </select>
+                                <label for="address" class="col-sm-3 text-right control-label col-form-label">Address</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Address Here">
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="phone_number" class="col-sm-3 text-right control-label col-form-label">Phone number</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Phone number Here">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="plant" class="col-sm-3 text-right control-label col-form-label">Plant</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="plant" name="plant" placeholder="Plant Here">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label class="col-md-3 m-t-15">Multiple Select</label>
                                 <div class="col-md-9">
-                                    <select class="select2 form-control m-t-15" multiple="multiple" style="height: 36px;width: 100%;">
+                                    <select class="select2 form-control m-t-15" multiple="multiple" style="height: 36px;width: 100%;" name="class_id[]">
                                         <optgroup label="Monday">
                                             <option value="1">Gym 7:00am-9:00am</option>
-                                            <option value="0">yoga 9:00am-11:00am</option>
+                                            <option value="2">yoga 9:00am-11:00am</option>
                                         </optgroup>
                                         <optgroup label="Tuesday">
-                                            <option value="1">Gym 7:00am-9:00am</option>
-                                            <option value="0">yoga 9:00am-11:00am</option>
+                                            <option value="3">Gym 7:00am-9:00am</option>
+                                            <option value="4">yoga 9:00am-11:00am</option>
                                         </optgroup>
                                     </select>
                                 </div>
@@ -60,7 +63,7 @@
                         </div>
                         <div class="border-top">
                             <div class="card-body">
-                                <button type="submit" class="btn btn-primary" name="btn_add_member">Thêm</button>
+                                <button type="submit" class="btn btn-primary" name="btn_add_user">Thêm</button>
                                 <!-- <button type="button" class="btn btn-primary" onclick="location.href='admin_member_list.php'">Danh sách</button> -->
                             </div>
                         </div>

@@ -7,7 +7,8 @@ class m_trainers extends database {
         return $this->execute(array($id,$trainer_name,$trainer_categorie));
     }
     public function read_trainer() {
-        $sql = "select * from trainers";
+        $sql = "select tr.*,categories_name as categories_name from trainers as tr 
+                inner join categories as ca on tr.trainer_categorie=ca.id";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }

@@ -38,30 +38,29 @@ class c_class
         include_once("view/v_class_detail_list.php");
     }
 
-    public function class_edit()
+    public function show_class_edit()
     {
         $m_categorie = new m_categorie();
         $categorie = $m_categorie->read_categorie();
 
         $m_trainers = new m_trainers();
         $trainers = $m_trainers->read_trainer();
-
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $m_class = new m_class();
             $class = $m_class->read_class_by_id($id);
             include_once("view/v_class_edit.php");
-        }
+        }}
+    public function class_update(){
         if (isset($_POST['btn_update_class'])) {
-            $id = $_GET['id'];
+            $id = $_POST['id'];
             $categories_id = $_POST['categories_id'];
             $time = $_POST['time'];
             $day_ = $_POST['day_'];
             $trainers_id = $_POST['trainers_id'];
             $mclass = new m_class();
             $mclass->edit_class($categories_id, $trainers_id, $time, $day_, $id);
-
-            header('location:class_detail_list.php?day='.$day_);
+            header('location:?ctr=class_detail_list&day='.$day_);
         }
     }
 
@@ -72,7 +71,7 @@ class c_class
             $id = $_GET['id'];
             $m_class = new m_class();
             $m_class->delete_class($id);
-            header('location:class_list.php?dl=success');
+            header('location:?ctr=class_list&dl=success');
         }
     }
 }

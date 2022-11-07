@@ -25,7 +25,7 @@
                                     <td><?=$value->time?></td>
                                     <td><?=$value->day_?></td>
                                     <td>
-                                        <button type="button" class="btn btn-primary" onclick=" location.href='class_edit.php?id=<?=$value->class_id?>'">Sửa</button>
+                                        <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_edit&id=<?=$value->class_id?>'">Sửa</button>
                                         <button type="button" class="btn btn-primary" onclick="return confirm_delete('<?=$value->class_id?>') ">Xóa</button>
                                     </td>
                                 </tr>
@@ -67,7 +67,7 @@
         $('#zero_config').DataTable();
         function confirm_delete(id){
             if(confirm('Bạn chắc chắn muốn xóa lớp có id là '+id)){
-                window.open('class_delete.php?id='+id,'_self');
+                window.open('?ctr=class_delete&id='+id,'_self');
             }
         }
     </script>

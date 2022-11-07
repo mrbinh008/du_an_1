@@ -12,7 +12,7 @@ class m_class extends database
 
     public function read_class($day_)
     {
-        $sql = "select *,class.id as class_id,categories.categories_name as categories_name ,trainers.trainer_name as trainer_name from class 
+        $sql = "select class.*,class.id as class_id,categories.categories_name as categories_name ,trainers.trainer_name as trainer_name from class 
                 inner join categories on class.categories_id=categories.id
                 inner join trainers on class.trainers_id=trainers.id
                 where class.day_= '$day_';

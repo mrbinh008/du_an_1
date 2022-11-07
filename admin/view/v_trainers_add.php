@@ -19,16 +19,18 @@
                                 <div class="col-md-9">
                                     <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="trainer_categorie">
                                         <option>Select</option>
-                                        <option value="1">Gym</option>
-                                        <option value="2">Yoga</option>
+                                        <?php foreach ($categorie as $item => $value): ?>
+                                        <option value="<?=$value->id?>"><?=$value->categories_name?></option>
+    <?php endforeach;?>
+
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="border-top">
                             <div class="card-body">
-                                <button type="submit" class="btn btn-primary" name="btn_add_categorier">Thêm</button>
-                                <button type="button" class="btn btn-primary" onclick="location.href='categorier_list.php'">Danh sách</button>
+                                <button type="submit" class="btn btn-primary" name="btn_add_trainer">Thêm</button>
+                                <button type="button" class="btn btn-primary" onclick="location.href='?ctr=trainers_list'">Danh sách</button>
                             </div>
                         </div>
                     </form>

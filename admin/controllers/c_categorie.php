@@ -17,14 +17,14 @@ class c_categorie
         include_once("view/v_categories_add.php");
     }
 
-    public function acategorie_list()
+    public function categorie_list()
     {
         $m_categorie = new m_categorie();
         $categorie = $m_categorie->read_categorie();
         include_once("view/v_categorie_list.php");
     }
 
-    public function show_acategorie_edit()
+    public function show_categorie_edit()
     {
         $m_categorie = new m_categorie();
         if (isset($_GET['id'])) {
@@ -42,7 +42,7 @@ class c_categorie
             $categorie_name = $_POST['categorie_name'];
             $categorie_meaningful = $_POST['categorie_mean'];
             $m_categorie->edit_categorie($categorie_name,$categorie_meaningful,$id);
-            header('location:categorie_list.php?upd=success');
+            header('location:?ctr=categorie_list&upd=success');
         }
 
     }
@@ -53,7 +53,7 @@ class c_categorie
             $id = $_GET['id'];
             $m_categorie = new m_categorie();
             $m_categorie->delete_categorie($id);
-            header('location:categorie_list.php?dl=success');
+            header('location:?ctr=categorie_list&dl=success');
         }
     }
 }

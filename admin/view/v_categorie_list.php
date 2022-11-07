@@ -21,7 +21,7 @@
                                 <td><?=$value->categories_name?></td>
                                 <td><?=$value->categories_meaningful?></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='categorie_edit.php?id=<?=$value->id?>'">Sửa</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=categorie_edit&id=<?=$value->id?>'">Sửa</button>
                                     <button type="button" class="btn btn-primary" onclick="return confirm_delete('<?=$value->id?>','<?=$value->categories_name?>') ">Xóa</button>
                                 </td>
                             </tr>
@@ -58,7 +58,7 @@
     $('#zero_config').DataTable();
     function confirm_delete(id,name){
         if(confirm('Bạn chắc chắn muốn xóa '+name)){
-            window.open('categorie_delete.php?id='+id,'_self');
+            window.open('?ctr=categorie_delete&id='+id,'_self');
         }
     }
 </script>

@@ -18,43 +18,43 @@
                             <tr>
                                 <td style="text-align: center">Monday</td>
                                 <td style="text-align: center">
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Monday'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_detail_list&day=Monday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: center">Tuesday</td>
                                 <td style="text-align: center">
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Tuesday'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_detail_list&day=Tuesday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: center">Wednesday</td>
                                 <td style="text-align: center">
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Wednesday'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_detail_list&day=Wednesday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: center">Thursday</td>
                                 <td style="text-align: center">
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Thursday'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_detail_list&day=Thursday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: center">Friday</td>
                                 <td style="text-align: center">
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Friday'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_detail_list&day=Friday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: center">Saturday</td>
                                 <td style="text-align: center">
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Saturday'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_detail_list&day=Saturday'">Chi tiết</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="text-align: center">Sunday</td>
                                 <td style="text-align: center">
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='class_detail_list.php?day=Sunday'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=class_detail_list&day=Sunday'">Chi tiết</button>
                                 </td>
                             </tr>
                         </tbody>

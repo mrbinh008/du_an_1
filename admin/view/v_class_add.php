@@ -79,7 +79,7 @@
                                     <button type="submit" class="btn btn-primary" name="btn_add_class">Thêm
                                     </button>
                                     <button type="button" class="btn btn-primary"
-                                            onclick="location.href='class_list.php'">Danh sách
+                                            onclick="location.href='?ctr=class_list'">Danh sách
                                     </button>
                                 </div>
                             </div>

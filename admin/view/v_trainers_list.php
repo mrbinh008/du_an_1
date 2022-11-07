@@ -18,41 +18,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php foreach ($trainers as $item => $value): ?>
                             <tr>
-                                <td>john</td>
-                                <td>Gym</td>
-
+                                <td><?= $value->trainer_name?></td>
+                                <td><?= $value->categories_name?></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
+                                    <button type="button" class="btn btn-primary" onclick=" location.href='?ctr=trainers_edit&id=<?=$value->id?>' ">Sửa</button>
+                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete('<?=$value->id?>','<?=$value->trainer_name?>') ">Xóa</button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>john</td>
-                                <td>Gym</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>john</td>
-                                <td>Gym</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>john</td>
-                                <td>Gym</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" onclick=" location.href='' ">Sửa</button>
-                                    <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
-                                </td>
-                            </tr>
-
+                        <?php endforeach;?>
                         </tbody>
                         <tfoot>
                             <tr>
@@ -83,6 +58,12 @@
      *       Basic Table                   *
      ****************************************/
     $('#zero_config').DataTable();
+
+    function confirm_delete(id,name){
+        if(confirm('Bạn chắc chắn muốn xóa trainer '+name)){
+            window.open('?ctr=class_delete&id='+id,'_self');
+        }
+    }
 </script>
 
 <?php include_once 'layout/footer.php'; ?>

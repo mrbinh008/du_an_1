@@ -4,9 +4,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
-                    <form class="form-horizontal" action="" method="post">
+                    <form class="form-horizontal" action="?ctr=user_update" method="post">
                         <div class="card-body">
                             <h4 class="card-title">User Info</h4>
+                            <input type="text" class="form-control" id="id" name="id" value="<?=$user->id?>" hidden>
                             <div class="form-group row">
                                 <label for="fname" class="col-sm-3 text-right control-label col-form-label">Fistname</label>
                                 <div class="col-sm-9">
@@ -47,7 +48,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 text-right control-label col-form-label">Class</label>
                                 <div class="col-md-9">
-                                    <select class="select2 form-control m-t-15" multiple="multiple" style="height: 36px;width: 100%;">
+                                    <select class="select2 form-control m-t-15" multiple="multiple" name="class_id" style="height: 36px;width: 100%;">
                                         <optgroup label="Monday">
                                             <option value="1">Gym 7:00am-9:00am</option>
                                             <option value="0">yoga 9:00am-11:00am</option>

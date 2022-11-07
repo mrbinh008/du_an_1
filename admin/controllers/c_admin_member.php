@@ -46,7 +46,7 @@ class c_admin_member
             $email = $_POST['email'];
             $role_ = $_POST['role'];
             $m_admin_member->edit_admin_member($fullname, $email, $role_, $id);
-            header('location:admin_member_list.php');
+            header('location:?ctr=admin_member_list');
         }
 
     }
@@ -57,7 +57,7 @@ class c_admin_member
             $id = $_GET['id'];
             $m_admin_member = new m_admin_member();
             $m_admin_member->delete_admin_member($id);
-            header('location:admin_member_list.php?dl=success');
+            header('location:?ctr=admin_member_list&dl=success');
         }
     }
 }
