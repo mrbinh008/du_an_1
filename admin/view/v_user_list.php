@@ -27,9 +27,16 @@
                                 <td><?= $value->email ?></td>
                                 <td><?= $value->address ?></td>
                                 <td><?= $value->phone_number ?></td>
-                                <td><?= $value->plant ?></td>
+                                <td><?php
+                                    if ($value->plant==0){
+                                        echo "BEGINNER";
+                                    }elseif ($value->plant==1){
+                                        echo "PREMIUM";
+                                    }else{
+                                        echo "ULTIMATE";
+                                    } ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='?ctr=user_detail_list&user_id=<?= $value->id ?>'">Chi tiết</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='?ctr=user_detail_list&user_id=<?= $value->user_id ?>'">Chi tiết</button>
                                     <button type="button" class="btn btn-primary" onclick="location.href='?ctr=user_edit&user_id=<?= $value->id ?>'">Sửa</button>
                                     <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
                                 </td>

@@ -1,5 +1,5 @@
 <?php
-include_once("models/m_categorie.php");
+
 
 class c_categorie
 {

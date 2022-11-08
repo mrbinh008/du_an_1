@@ -1,5 +1,4 @@
 <?php
-include_once("models/m_admin_member.php");
 
 class c_admin_member
 {

@@ -2,12 +2,12 @@
 
     <div class="page-wrapper">
         <div class="container-fluid">
-
+<button type="button" class="btn btn-default" onclick="location.href='?ctr=user_list'">Danh sách khách hàng</button>
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Thông tin khách hàng</h5>
                     <div class="table-responsive">
-                        <table id="zero_config" class="table table-striped table-bordered">
+                        <table  class="table table-striped table-bordered">
                             <caption>Thông tin khách hàng</caption>
                             <thead>
                             <tr>
@@ -17,8 +17,6 @@
                                 <th>Address</th>
                                 <th>Phone number</th>
                                 <th>Plant</th>
-<!--                                <th>Class</th>-->
-<!--                                <th>Action</th>-->
                             </tr>
                             </thead>
                             <tbody>
@@ -35,20 +33,22 @@
                         </table>
 
                         <table id="one_config" class="table table-striped table-bordered">
-                            <caption>Danh sách lớp</caption>
+                            <caption>Danh sách lớp tập</caption>
                             <thead>
                             <tr>
+                                <th>Class name</th>
                                 <th>Trainers name</th>
                                 <th>Time</th>
                                 <th>Day</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($user_detail as $item => $value): ?>
+                            <?php foreach ($class_user as $item => $value): ?>
                                 <tr>
+                                    <td> <?= $value->day_ ?></td>
+                                    <td><?=$value->categorie_name?>_<?=$value->class_id?></td>
                                     <td><?= $value->trainers_name ?></td>
                                     <td><?= $value->time_ ?></td>
-                                    <td> <?= $value->day_ ?></td>
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

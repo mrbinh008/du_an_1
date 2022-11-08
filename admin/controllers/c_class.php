@@ -1,7 +1,4 @@
 <?php
-include_once("models/m_categorie.php");
-include_once("models/m_class.php");
-include_once("models/m_trainers.php");
 
 class c_class
 {
@@ -15,26 +12,36 @@ class c_class
 
         if (isset($_POST['btn_add_class'])) {
             $id = NULL;
-            $categories_id = $_POST['categories_id'];
-            $trainers_id = $_POST['trainers_id'];
-            $time = $_POST['time'];
+            $categorie_id = $_POST['categories_id'];
+            $trainer_id = $_POST['trainers_id'];
+            $time_ = $_POST['time'];
             $day_ = $_POST['day_'];
             $m_class = new m_class();
-            $m_class->insert_class($id, $categories_id, $trainers_id, $time, $day_);
+            $m_class->insert_class($id, $categorie_id, $trainer_id, $time_, $day_);
         }
         include_once("view/v_class_add.php");
     }
 
     public function class_list()
     {
+        $m_class = new m_class();
+        $class = $m_class->read_class();
+        $day_='Monday';
+        if (isset($_POST['day_'])&&$_POST['day_']!=null){
+        $day_=$_POST['day_'];
+        }
+        $m_class = new m_class();
+        $class_day = $m_class->read_class_by_day($day_);
         include_once("view/v_class_list.php");
     }
 
     public function class_detail_list()
     {
-        $day_ = $_GET['day'];
-        $m_class = new m_class();
-        $class = $m_class->read_class($day_);
+        $class_id=$_GET['class_id'];
+        $m_class= new m_class();
+        $class=$m_class->read_class_by_id($class_id);
+        $m_class_member = new m_class_member();
+        $class_member = $m_class_member->read_class_member_by_class_id($class_id);
         include_once("view/v_class_detail_list.php");
     }
 

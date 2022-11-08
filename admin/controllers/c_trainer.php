@@ -1,6 +1,4 @@
 <?php
-include_once("models/m_trainers.php");
-include_once("models/m_categorie.php");
 class c_trainer
 {
     public function trainers_add()

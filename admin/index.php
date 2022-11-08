@@ -8,6 +8,16 @@ include_once 'controllers/c_user.php';
 //include_once 'controllers/c_comments';
 //include_once 'controllers/c_contact';
 //include_once 'controllers/c_blog';
+//models
+include_once("models/m_class.php");
+include_once("models/m_categorie.php");
+include_once("models/m_user.php");
+include_once("models/m_class_member.php");
+include_once("models/m_comments.php");
+include_once("models/m_contact.php");
+include_once("models/m_trainers.php");
+include_once("models/m_admin_member.php");
+include_once("models/m_blog.php");
 
 $ctr = isset($_GET['ctr']) ? $_GET['ctr'] : '/';
 session_start();
