@@ -1,4 +1,5 @@
 <?php
+//import controllers
 include_once 'controllers/c_home.php';
 include_once 'controllers/c_admin_member.php';
 include_once 'controllers/c_categorie.php';
@@ -8,6 +9,7 @@ include_once 'controllers/c_user.php';
 //include_once 'controllers/c_comments';
 //include_once 'controllers/c_contact';
 //include_once 'controllers/c_blog';
+include_once 'controllers/c_404_error.php';
 
 $ctr = isset($_GET['ctr']) ? $_GET['ctr'] : '/';
 session_start();
@@ -81,9 +83,9 @@ switch ($ctr) {
         $categorie->categorie_update();
         break;
         //class
-    case 'class_add':
+    case 'class_user_add':
         $class = new c_class();
-        $class->class_add();
+        $class->class_user_add();
         break;
     case 'class_delete':
         $class = new c_class();
@@ -195,5 +197,6 @@ switch ($ctr) {
         break;
 
     default:
-        $error_404_show;
+        $error= new c_404_error();
+        $error-> show_404_error();
 }

@@ -3,11 +3,11 @@ require_once("database.php");
 
 class m_class extends database
 {
-    public function insert_class($id, $categories_id, $trainers_id, $time, $day_)
+    public function insert_class_user($id, $categories_id, $user_id, $plant_type)
     {
-        $sql = "INSERT INTO class  VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO class  VALUES (?,?,?,?)";
         $this->setQuery($sql);
-        return $this->execute(array($id, $categories_id, $trainers_id, $time, $day_));
+        return $this->execute(array($id, $categories_id, $user_id, $plant_type));
     }
 
     public function read_class($day_)

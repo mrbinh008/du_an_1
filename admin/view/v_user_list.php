@@ -5,8 +5,25 @@
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Basic Datatable</h5>
+                <h5 class="card-title">Danh sách khách hàng</h5>
                 <div class="table-responsive">
+<!--                    <select>-->
+<!--                        <option>Active</option>-->
+<!--                        <option>Pending</option>-->
+<!--                    </select>-->
+
+                    <form class="form-group row" name="status_submit" id="status_submit" action="" method="post">
+                        <label class="col-sm-3 text-right control-label col-form-label">Status : </label>
+                        <div class="col-md-9">
+                            <select class="select2 form-control custom-select"
+                                    style="width: 20%; height:36px;" name="status_type" onchange="this.form.submit()">
+                                <option value="" <?php if (isset($status)&&$status==null){ echo 'selected';}?> >All</option>
+                               <option value="0" <?php if (isset($status)&&$status==0){echo 'selected';}?> >Active</option>
+                                <option value="1" <?php if (isset($status)&&$status==1){echo 'selected';}?> >Pending</option>
+                            </select>
+                        </div>
+                    </form>
+
                     <table id="zero_config" class="table table-striped table-bordered">
                         <thead>
                             <tr>
@@ -16,6 +33,7 @@
                                 <th>Address</th>
                                 <th>Phone number</th>
                                 <th>Plant</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -27,9 +45,20 @@
                                 <td><?= $value->email ?></td>
                                 <td><?= $value->address ?></td>
                                 <td><?= $value->phone_number ?></td>
-                                <td><?= $value->plant ?></td>
+                                <td><?php if ($value->plant==0){
+                                    echo 'BEGINNER PLANT';
+                                    }elseif ($value->plant==1){
+                                        echo 'PREMIUM PLANT';
+                                    }else{
+                                    echo 'ULTIMATE PLANT';
+                                    }
+
+                                    ?></td>
+                                <td><?=$value->status==0?'Active':'Pending'?></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='?ctr=user_detail_list&user_id=<?= $value->id ?>'">Chi tiết</button>
+                                    <?php if ($value->status==1): ?>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='?ctr=user_active&user_id=<?= $value->id ?>'">Active</button>
+                                    <?php endif;?>
                                     <button type="button" class="btn btn-primary" onclick="location.href='?ctr=user_edit&user_id=<?= $value->id ?>'">Sửa</button>
                                     <button type="button" class="btn btn-primary" onclick="return confirm_delete() ">Xóa</button>
                                 </td>
@@ -44,6 +73,7 @@
                                 <th>Address</th>
                                 <th>Phone number</th>
                                 <th>Plant</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </tfoot>

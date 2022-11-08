@@ -62,7 +62,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand" href="?ctr=home">
                         <!-- Logo icon -->
                         <b class="logo-icon p-l-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -260,7 +260,7 @@
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Class</span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="?ctr=class_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm lớp </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=class_user_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm học viên </span></a></li>
                                 <li class="sidebar-item"><a href="?ctr=class_list" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách lớp </span></a></li>
                             </ul>
                         </li>
@@ -272,8 +272,15 @@
                             </ul>
                         </li>
 
-                        
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="?ctr=user_list" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">User</span></a></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">User</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="?ctr=user_add" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Thêm khách hàng </span></a></li>
+                                <li class="sidebar-item"><a href="?ctr=user_list" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Danh sách khách hàng </span></a></li>
+                            </ul>
+                        </li>
+
+<!--                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="?ctr=user_list" aria-expanded="false"><i class="mdi mdi-relative-scale"></i><span class="hide-menu">User</span></a></li>-->
 
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Blog</span></a>

@@ -1,15 +1,25 @@
 <?php
 require_once ("database.php");
 class m_user extends database {
-    public function insert_user($id,$fist_name,$last_name,$email,$address,$phone_number,$plant,$class_id) {
-        $sql = "INSERT INTO user  VALUES (?,?,?,?,?,?,?,?)";
+    public function insert_user($id,$fist_name,$last_name,$email,$address,$phone_number,$categorie_id,$plant,$status) {
+        $sql = "INSERT INTO user  VALUES (?,?,?,?,?,?,?,?,?)";
         $this->setQuery($sql);
-        return $this->execute(array($id,$fist_name,$last_name,$email,$address,$phone_number,$plant,$class_id));
+        return $this->execute(array($id,$fist_name,$last_name,$email,$address,$phone_number,$categorie_id,$plant,$status));
     }
+//    public function insert_user_class($class_id,$user_id){
+//        $sql="INSERT INTO user_class VALUES (?,?)";
+//        $this->setQuery($sql);
+//        return $this->execute(array($class_id,$user_id));
+//    }
     public function read_user() {
         $sql = "select * from user";
         $this->setQuery($sql);
         return $this->loadAllRows();
+    }
+    public function read_user_by_status($status){
+        $sql = "select * from user where status=?";
+        $this->setQuery($sql);
+        return $this->loadAllRows(array($status));
     }
 
     public function read_user_detail($id) {

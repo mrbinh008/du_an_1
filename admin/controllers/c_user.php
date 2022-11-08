@@ -7,30 +7,36 @@ class c_user
 {
     public function user_add()
     {
-//        $m_categorie = new m_categorie();
-//        $categorie = $m_categorie->read_categorie();
+        $m_categorie = new m_categorie();
+        $categorie = $m_categorie->read_categorie();
 
         if (isset($_POST['btn_add_user'])) {
-
             $id = NULL;
             $fist_name = $_POST['fist_name'];
             $last_name = $_POST['last_name'];
             $email = $_POST['email'];
             $address = $_POST['address'];
             $phone_number = $_POST['phone_number'];
-            $plant = $_POST['plant'];
-            $class_id=$_POST['class_id'];
-
-            $m_user= new m_user();
-            $m_user->insert_user($id,$fist_name,$last_name,$email,$address,$phone_number,$plant,$class_id);
+            $plant = $_POST['plant_type'];
+            $categorie_id = $_POST['categorie_id'];
+            $status = $_POST['status'];
+            $m_user = new m_user();
+            $m_user->insert_user($id, $fist_name, $last_name, $email, $address, $phone_number, $categorie_id, $plant, $status);
         }
         include_once("view/v_user_add.php");
     }
 
     public function user_list()
     {
-        $m_user = new m_user();
-        $user = $m_user->read_user();
+
+        if (isset($_POST['status_type'])&&$_POST['status_type']!=null) {
+            $status = $_POST['status_type'];
+            $m_user = new m_user();
+            $user = $m_user->read_user_by_status($status);
+        } else{
+            $m_user = new m_user();
+            $user = $m_user->read_user();
+        }
         include_once("view/v_user_list.php");
     }
 
@@ -57,7 +63,9 @@ class c_user
             include_once("view/v_trainers_edit.php");
         }
     }
-    public function user_update(){
+
+    public function user_update()
+    {
         if (isset($_POST['btn_update_trainer'])) {
             $id = $_POST['id'];
             $trainer_name = $_POST['trainer_name'];

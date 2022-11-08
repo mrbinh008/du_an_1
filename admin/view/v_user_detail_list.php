@@ -2,7 +2,9 @@
 
     <div class="page-wrapper">
         <div class="container-fluid">
-
+<button type="button" class="btn btn-primary" style="margin-bottom: 0.5em" onclick="location.href='?ctr=user_list'">
+    Danh sách
+</button>
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Thông tin khách hàng</h5>

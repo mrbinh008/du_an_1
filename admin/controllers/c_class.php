@@ -5,28 +5,29 @@ include_once("models/m_trainers.php");
 
 class c_class
 {
-    public function class_add()
+    public function class_user_add()
     {
         $m_categorie = new m_categorie();
         $categorie = $m_categorie->read_categorie();
 
-        $m_trainers = new m_trainers();
-        $trainers = $m_trainers->read_trainer();
+        $m_user = new m_user();
+        $user = $m_user->read_user();
 
         if (isset($_POST['btn_add_class'])) {
             $id = NULL;
             $categories_id = $_POST['categories_id'];
-            $trainers_id = $_POST['trainers_id'];
-            $time = $_POST['time'];
-            $day_ = $_POST['day_'];
+            $user_id = $_POST['user_id'];
+            $plant_type = $_POST['plant_type'];
             $m_class = new m_class();
-            $m_class->insert_class($id, $categories_id, $trainers_id, $time, $day_);
+            $m_class->insert_class_user($id, $categories_id, $user_id, $plant_type);
         }
-        include_once("view/v_class_add.php");
+        include_once("view/v_class_user_add.php");
     }
 
     public function class_list()
     {
+        $m_categorie = new m_categorie();
+        $categorie = $m_categorie->read_categorie();
         include_once("view/v_class_list.php");
     }
 
