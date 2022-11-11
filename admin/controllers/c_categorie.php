@@ -1,5 +1,5 @@
 <?php
-include_once("models/m_categorie.php");
+//include_once("models/m_categorie.php");
 
 class c_categorie
 {
@@ -14,14 +14,14 @@ class c_categorie
             $result = $m_categorie->insert_categorie($id, $categorie_name, $categorie_mean);
 //            header('location:admin_member_add.php?result=' . $username);
         }
-        include_once("view/v_categories_add.php");
+        include_once("view/categorie/v_categories_add.php");
     }
 
     public function categorie_list()
     {
         $m_categorie = new m_categorie();
         $categorie = $m_categorie->read_categorie();
-        include_once("view/v_categorie_list.php");
+        include_once("view/categorie/v_categorie_list.php");
     }
 
     public function show_categorie_edit()
@@ -30,7 +30,7 @@ class c_categorie
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $categorie = $m_categorie->read_categorie_by_id($id);
-            include_once("view/v_categorie_edit.php");
+            include_once("view/categorie/v_categorie_edit.php");
         }
     }
 

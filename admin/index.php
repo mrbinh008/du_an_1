@@ -3,200 +3,368 @@
 include_once 'controllers/c_home.php';
 include_once 'controllers/c_admin_member.php';
 include_once 'controllers/c_categorie.php';
-include_once 'controllers/c_class.php';
 include_once 'controllers/c_trainer.php';
 include_once 'controllers/c_user.php';
+include_once 'controllers/c_plant.php';
 //include_once 'controllers/c_comments';
 //include_once 'controllers/c_contact';
 //include_once 'controllers/c_blog';
 include_once 'controllers/c_404_error.php';
-
+//models
+include_once("models/m_categorie.php");
+include_once("models/m_user.php");
+include_once("models/m_plant.php");
+include_once("models/m_trainers.php");
+include_once("models/m_admin_member.php");
+//include_once("models/m_comments.php");
+//include_once("models/m_contact.php");
+//include_once("models/m_blog.php");
 $ctr = isset($_GET['ctr']) ? $_GET['ctr'] : '/';
 session_start();
 switch ($ctr) {
     case '/':
-    case 'home':
-        $home = new c_home();
-        $home->index();
-        break;
-        //admin_member
-    case 'admin_member_add':
+        //login
+    case 'v_login':
         $admin_member = new c_admin_member();
-        $admin_member->admin_member_add();
+        $admin_member->v_login();
+        break;
+    case 'login':
+        $admin_member = new c_admin_member();
+        $admin_member->login();
+        break;
+    case 'logout':
+        $admin_member = new c_admin_member();
+        $admin_member->logout();
+        break;
+    //home
+    case 'home':
+        if (isset($_SESSION['user_admin'])) {
+            $home = new c_home();
+            $home->index();
+        } else {
+            $error = new c_404_error();
+            $error->show_404_error();
+        }
+        break;
+    //admin_member
+    case 'admin_member_add':
+        if (isset($_SESSION['user_admin'])) {
+            $admin_member = new c_admin_member();
+            $admin_member->admin_member_add();
+        } else {
+            $error = new c_404_error();
+            $error->show_404_error();
+        }
         break;
     case 'admin_member_delete':
-        $admin_member = new c_admin_member();
-        $admin_member->admin_member_delete();
+        if (isset($_SESSION['user_admin'])) {
+            $admin_member = new c_admin_member();
+            $admin_member->admin_member_delete();
+        } else {
+            $error = new c_404_error();
+            $error->show_404_error();
+        }
         break;
     case 'admin_member_edit':
-        $admin_member = new c_admin_member();
-        $admin_member->show_admin_member_edit();
-        break;
+        if (isset($_SESSION['user_admin'])) {
+            $admin_member = new c_admin_member();
+            $admin_member->show_admin_member_edit();
+            break;
+        } else {
+            $error = new c_404_error();
+        }
     case 'admin_member_list':
-        $admin_member = new c_admin_member();
-        $admin_member->admin_member_list();
+        if (isset($_SESSION['user_admin'])) {
+            $admin_member = new c_admin_member();
+            $admin_member->admin_member_list();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'admin_member_update':
-        $admin_member = new c_admin_member();
-        $admin_member->admin_member_update();
-        break;
-        //blog
+        if (isset($_SESSION['user_admin'])) {
+            $admin_member = new c_admin_member();
+            $admin_member->admin_member_update();
+            break;
+        } else {
+            $error = new c_404_error();
+        }
+    //blog
     case 'blog_add':
-        $blog = new c_blog();
-        $blog->blog_add();
+        if (isset($_SESSION['user_admin'])) {
+            $blog = new c_blog();
+            $blog->blog_add();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'blog_delete':
-        $blog = new c_blog();
-        $blog->blog_delete();
+        if (isset($_SESSION['user_admin'])) {
+            $blog = new c_blog();
+            $blog->blog_delete();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'blog_edit':
-        $blog = new c_blog();
-        $blog->show_blog_edit();
+        if (isset($_SESSION['user_admin'])) {
+            $blog = new c_blog();
+            $blog->show_blog_edit();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'blog_list':
-        $blog = new c_blog();
-        $blog->blog_list();
+        if (isset($_SESSION['user_admin'])) {
+            $blog = new c_blog();
+            $blog->blog_list();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'blog_update':
-        $blog = new c_blog();
-        $blog->blog_update();
+        if (isset($_SESSION['user_admin'])) {
+            $blog = new c_blog();
+            $blog->blog_update();
+        } else {
+            $error = new c_404_error();
+        }
         break;
-        //categorie
-    case 'categorie_add':
-        $categorie = new c_categorie();
-        $categorie->categorie_add();
+    //categorie
+    case 'categories_add':
+        if (isset($_SESSION['user_admin'])) {
+            $categorie = new c_categorie();
+            $categorie->categorie_add();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'categorie_delete':
-        $categorie = new c_categorie();
-        $categorie->categorie_delete();
+        if (isset($_SESSION['user_admin'])) {
+            $categorie = new c_categorie();
+            $categorie->categorie_delete();
+        } else {
+            $error = new c_404_error();
+        }
         break;
-    case 'categorie_edit':
-        $categorie = new c_categorie();
-        $categorie->show_categorie_edit();
+    case
+    'categorie_edit':
+        if (isset($_SESSION['user_admin'])) {
+            $categorie = new c_categorie();
+            $categorie->show_categorie_edit();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'categorie_list':
-        $categorie = new c_categorie();
-        $categorie->categorie_list();
+        if (isset($_SESSION['user_admin'])) {
+            $categorie = new c_categorie();
+            $categorie->categorie_list();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'categorie_update':
-        $categorie = new c_categorie();
-        $categorie->categorie_update();
+        if (isset($_SESSION['user_admin'])) {
+            $categorie = new c_categorie();
+            $categorie->categorie_update();
+        } else {
+            $error = new c_404_error();
+        }
         break;
-        //class
-    case 'class_user_add':
-        $class = new c_class();
-        $class->class_user_add();
-        break;
-    case 'class_delete':
-        $class = new c_class();
-        $class->class_delete();
-        break;
-    case 'class_edit':
-        $class = new c_class();
-        $class->show_class_edit();
-        break;
-    case 'class_list':
-        $class = new c_class();
-        $class->class_list();
-        break;
-    case 'class_detail_list':
-        $class = new c_class();
-        $class->class_detail_list();
-        break;
-    case 'class_update':
-        $class = new c_class();
-        $class->class_update();
-        break;
-        //comments
+    //comments
     case 'comments_add':
-        $comments = new c_comments();
-        $comments->comments_add();
+        if (isset($_SESSION['user_admin'])) {
+            $comments = new c_comments();
+            $comments->comments_add();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'comments_delete':
-        $comments = new c_comments();
-        $comments->comments_delete();
+        if (isset($_SESSION['user_admin'])) {
+            $comments = new c_comments();
+            $comments->comments_delete();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'comments_edit':
-        $comments = new c_comments();
-        $comments->show_comments_edit();
+        if (isset($_SESSION['user_admin'])) {
+            $comments = new c_comments();
+            $comments->show_comments_edit();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'comments_list':
-        $comments = new c_comments();
-        $comments->comments_list();
+        if (isset($_SESSION['user_admin'])) {
+            $comments = new c_comments();
+            $comments->comments_list();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'comments_update':
-        $comments = new c_comments();
-        $comments->comments_update();
+        if (isset($_SESSION['user_admin'])) {
+            $comments = new c_comments();
+            $comments->comments_update();
+        } else {
+            $error = new c_404_error();
+        }
         break;
-        //contact
+    //contact
     case 'contact_add':
-        $contact = new c_contact();
-        $contact->contact_add();
+        if (isset($_SESSION['user_admin'])) {
+            $contact = new c_contact();
+            $contact->contact_add();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'contact_delete':
-        $contact = new c_contact();
-        $contact->contact_delete();
+        if (isset($_SESSION['user_admin'])) {
+            $contact = new c_contact();
+            $contact->contact_delete();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'contact_edit':
-        $contact = new c_contact();
-        $contact->show_contact_edit();
+        if (isset($_SESSION['user_admin'])) {
+            $contact = new c_contact();
+            $contact->show_contact_edit();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'contact_list':
-        $contact = new c_contact();
-        $contact->contact_list();
+        if (isset($_SESSION['user_admin'])) {
+            $contact = new c_contact();
+            $contact->contact_list();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'contact_update':
-        $contact = new c_contact();
-        $contact->contact_update();
+        if (isset($_SESSION['user_admin'])) {
+            $contact = new c_contact();
+            $contact->contact_update();
+        } else {
+            $error = new c_404_error();
+        }
         break;
-        //trainers
+    //trainers
     case 'trainers_add':
-        $trainers = new c_trainer();
-        $trainers->trainers_add();
+        if (isset($_SESSION['user_admin'])) {
+            $trainers = new c_trainer();
+            $trainers->trainers_add();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'trainers_delete':
-        $trainers = new c_trainer();
-        $trainers->trainers_delete();
+        if (isset($_SESSION['user_admin'])) {
+            $trainers = new c_trainer();
+            $trainers->trainers_delete();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'trainers_edit':
-        $trainers = new c_trainer();
-        $trainers->show_trainers_edit();
+        if (isset($_SESSION['user_admin'])) {
+            $trainers = new c_trainer();
+            $trainers->show_trainers_edit();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'trainers_list':
-        $trainers = new c_trainer();
-        $trainers->trainers_list();
+        if (isset($_SESSION['user_admin'])) {
+            $trainers = new c_trainer();
+            $trainers->trainers_list();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'trainers_update':
-        $trainers = new c_trainer();
-        $trainers->trainers_update();
+        if (isset($_SESSION['user_admin'])) {
+            $trainers = new c_trainer();
+            $trainers->trainers_update();
+        } else {
+            $error = new c_404_error();
+        }
         break;
-        //user
+
+        //plant
+
+    case 'plant_list':
+        if (isset($_SESSION['user_admin'])) {
+            $plant = new c_plant();
+            $plant->plant_list();
+        } else {
+            $error = new c_404_error();
+        }
+        break;
+    //user
     case 'user_add':
-        $user = new c_user();
-        $user->user_add();
+        if (isset($_SESSION['user_admin'])) {
+            $user = new c_user();
+            $user->user_add();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'user_delete':
-        $user = new c_user();
-        $user->user_delete();
+        if (isset($_SESSION['user_admin'])) {
+            $user = new c_user();
+            $user->user_delete();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'user_edit':
-        $user = new c_user();
-        $user->show_user_edit();
+        if (isset($_SESSION['user_admin'])) {
+            $user = new c_user();
+            $user->show_user_edit();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'user_list':
-        $user = new c_user();
-        $user->user_list();
+        if (isset($_SESSION['user_admin'])) {
+            $user = new c_user();
+            $user->user_list();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'user_update':
-        $user = new c_user();
-        $user->user_update();
+        if (isset($_SESSION['user_admin'])) {
+            $user = new c_user();
+            $user->user_update();
+        } else {
+            $error = new c_404_error();
+        }
         break;
     case 'user_detail_list':
-        $user = new c_user();
-        $user->user_detail_list();
+        if (isset($_SESSION['user_admin'])) {
+            $user = new c_user();
+            $user->user_detail_list();
+        } else {
+            $error = new c_404_error();
+        }
+        break;
+    case 'user_active':
+        if (isset($_SESSION['user_admin'])) {
+            $user = new c_user();
+            $user->user_active();
+        } else {
+            $error = new c_404_error();
+        }
         break;
 
     default:
-        $error= new c_404_error();
-        $error-> show_404_error();
+        $error = new c_404_error();
+        $error->show_404_error();
 }

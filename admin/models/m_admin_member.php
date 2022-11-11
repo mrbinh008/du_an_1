@@ -27,6 +27,19 @@ public  function delete_admin_member($id){
         $this->setQuery($sql);
         return $this->execute(array($id));
 }
+//login
 
-
+//check username and pass
+    function read_admin_member_by_id_pass($user_name,$password)
+    {
+        $sql="select * from admin_account where user_name=? and password=?";
+        $this->setQuery($sql);
+        return $this->loadRow(array($user_name,md5($password)));
+    }
+    function read_admin_member_by_username($user_name)
+    {
+        $sql="select * from admin_account where user_name=?";
+        $this->setQuery($sql);
+        return $this->loadRow(array($user_name));
+    }
 }
